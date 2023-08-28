@@ -71,6 +71,10 @@ int main()
 		visited[i]=false;
 	}
 	
-	printBFS(edge,v,visited,0);
+	for(int i=0;i<v;i++)
+   	{
+        	if(!visited[i])
+            		printBFS(edge,v,visited,i);
+    	}
 	return 0;
 }
