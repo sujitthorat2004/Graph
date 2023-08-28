@@ -7,14 +7,14 @@ void printBFS(int** edge,int v,bool* visited,int sv)
 	queue<int> remaining;
 	
 	remaining.push(sv);
-	
+	visited[sv]=true;
+		
 	while(remaining.size()!=0)
 	{
 		int front=remaining.front();
 		remaining.pop();
 		
 		cout<<front;
-		visited[front]=true;
 
 		for(int i=0;i<v;i++)
 		{
@@ -24,8 +24,13 @@ void printBFS(int** edge,int v,bool* visited,int sv)
 			if(edge[front][i]==1)
 			{
 				if(!visited[i])
+				{
 					remaining.push(i);
-			}
+					//at the time of inserting in queue we are making them true so that no other 
+					//node can push them again in queue.
+					visited[i]=true;
+				}
+			}	
 		}
 	}
 }
