@@ -14,7 +14,7 @@ void printBFS(int** edge,int v,bool* visited,int sv)
 		int front=remaining.front();
 		remaining.pop();
 		
-		cout<<front;
+		cout<<front<<" ";
 
 		for(int i=0;i<v;i++)
 		{
