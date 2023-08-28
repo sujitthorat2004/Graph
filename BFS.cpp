@@ -70,7 +70,8 @@ int main()
 	{
 		visited[i]=false;
 	}
-	
+
+	//checking for connected part
 	for(int i=0;i<v;i++)
    	{
         	if(!visited[i])
